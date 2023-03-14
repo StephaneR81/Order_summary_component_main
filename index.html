@@ -11,29 +11,34 @@
 </head>
 
 <body>
+    <img id="bg-image"
+        srcset="./assets/img/pattern-background-mobile.svg 375w, ./assets/img/pattern-background-desktop.svg 1440w"
+        sizes="(min-width: 1440px) 1440px, 100vw" src="./assets/img/pattern-background-desktop.svg"
+        alt="Image de fond d'écran représentant une vague bleutée">
     <main>
         <!-- Card -->
         <article class="card">
             <!-- Image wrapper -->
             <div class="card__img-wrapper">
-                <img src="./assets/img/illustration-hero.svg"
+                <img width="310" height="150" src="./assets/img/illustration-hero.svg"
                     alt="Image représentant un personnage munid'un casque audio et baladeur">
             </div>
             <!-- Card summary -->
-            <div class="summary">
+            <div class="card__summary">
                 <h1>Order Summary</h1>
                 <p>You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like !
                 </p>
             </div>
             <!-- Card plan -->
-            <div class="plan">
-                <img src="./assets/img/icon-music.svg" alt="Image représentant une icône de musique">
+            <div class="card__plan">
+                <img width="48" height="48" src="./assets/img/icon-music.svg"
+                    alt="Image représentant une icône de musique">
                 <p>Annual Plan <span>$59.99/year</span></p>
                 <a href="#">Change</a>
             </div>
             <!-- Buttons -->
-            <button>Proceed to Payment</button>
-            <button>Cancel Order</button>
+            <button id="button-pay">Proceed to Payment</button>
+            <button id="button-cancel">Cancel Order</button>
         </article>
     </main>
 </body>
