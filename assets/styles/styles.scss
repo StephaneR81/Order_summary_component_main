@@ -4,6 +4,8 @@
 // Color Primary
 $paleBlue: hsl(225, 100%, 94%);
 $brightBlue: hsl(245, 75%, 52%);
+$lightenBrightBlue: lighten($brightBlue, 15);
+$veryLightenBrightBlue: lighten($brightBlue, 35);
 
 // Color Neutral
 $veryPaleBlue: hsl(225, 100%, 98%);
@@ -122,6 +124,7 @@ main {
             font-size: 14px;
             color: $brightBlue;
             font-weight: 700;
+            transition: all 0.2s ease-in-out;
         }
     }
 
@@ -130,11 +133,12 @@ main {
         margin-top: 25px;
         padding: 15px;
         border: none;
-        border-radius: 15px;
+        border-radius: 10px;
         font-size: 14px;
         font-weight: 900;
         color: #FFF;
         background-color: $brightBlue;
+        transition: all 0.2s ease-in-out;
     }
 
     #button-cancel {
@@ -145,8 +149,29 @@ main {
         font-size: 14px;
         font-weight: 700;
         background-color: transparent;
+        transition: color 0.2s ease-in-out;
     }
 }
 
 // DESKTOP
-@media screen and (min-width:1440px) {}
+@media screen and (min-width:1440px) {
+    .card {
+        &__plan {
+            a:hover {
+                color: $lightenBrightBlue;
+                text-decoration: none;
+            }
+        }
+
+        #button-pay:hover {
+            background-color: $lightenBrightBlue;
+            box-shadow: 0 0 0 0 transparent, 0 15px 20px $veryLightenBrightBlue;
+            cursor: pointer;
+        }
+
+        #button-cancel:hover {
+            color: $darkBlue;
+            cursor: pointer;
+        }
+    }
+}
